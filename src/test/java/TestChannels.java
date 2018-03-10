@@ -28,10 +28,10 @@ public class TestChannels {
         serchButton.click();
 
         WebElement loginField = driver.findElement(By.id("login"));
-        loginField.sendKeys("moriturus");
+        loginField.sendKeys("login");
 
         WebElement passwordField = driver.findElement(By.id("passw"));
-        passwordField.sendKeys("droplles");
+        passwordField.sendKeys("password");
 
         WebElement enterButton = driver.findElement(By.id("loginuser"));
         enterButton.click();
