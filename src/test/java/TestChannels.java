@@ -14,6 +14,8 @@ public class TestChannels {
     @Test
     public void MyTest() throws Exception {
 
+        new Login();
+
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromdriver\\chromedriver.exe");
 
         driver = new ChromeDriver();
@@ -28,10 +30,10 @@ public class TestChannels {
         serchButton.click();
 
         WebElement loginField = driver.findElement(By.id("login"));
-        loginField.sendKeys("login");
+        loginField.sendKeys(Login.login);
 
         WebElement passwordField = driver.findElement(By.id("passw"));
-        passwordField.sendKeys("password");
+        passwordField.sendKeys(Login.password);
 
         WebElement enterButton = driver.findElement(By.id("loginuser"));
         enterButton.click();
@@ -55,6 +57,7 @@ public class TestChannels {
 
         }
 
+        driver.quit();
         driver.close();
     }
 

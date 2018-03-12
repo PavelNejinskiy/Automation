@@ -1,6 +1,8 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
+import sun.rmi.runtime.Log;
+
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 
@@ -10,6 +12,8 @@ public class TeslLoginPage {
 
     @Test
     public void testAPositiveLogin() throws Exception {
+
+        new Login();
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\chromdriver\\chromedriver.exe");
 
@@ -24,10 +28,10 @@ public class TeslLoginPage {
         serchButton.click();
 
         WebElement loginField = driver.findElement(By.id("login"));
-        loginField.sendKeys("login");
+        loginField.sendKeys(Login.login);
 
         WebElement passwordField = driver.findElement(By.id("passw"));
-        passwordField.sendKeys("password");
+        passwordField.sendKeys(Login.password);
 
         WebElement enterButton = driver.findElement(By.id("loginuser"));
         enterButton.click();

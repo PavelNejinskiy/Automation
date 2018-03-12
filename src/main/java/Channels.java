@@ -36,17 +36,20 @@ public class Channels {
         return listCH;
     }
 
-    public static void main(String[] args) throws IOException {
-
-        Channels ch = new Channels();
-
-        System.out.println(ch.getChannelsID().size());
-        System.out.println(ch.getChannels().size());
-
-        for (String s : ch.getChannels()) {
-            System.out.println(s);
-        }
-    }
+//    public static void main(String[] args) throws IOException {
+//
+////        Channels ch = new Channels();
+////
+////        System.out.println(ch.getChannelsID().size());
+////        System.out.println(ch.getChannels().size());
+////
+////        for (String s : ch.getChannels()) {
+////            System.out.println(s);
+////        }
+//
+//
+//
+//    }
 
 
 }
